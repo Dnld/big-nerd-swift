@@ -89,13 +89,40 @@ if let name = middleName {
 }
 
 // making use of a guard statement
+//func greetByMiddleName(name: (first: String, middle: String?, last: String)) {
+//    guard let middleName = name.middle else {
+//        print("Hey there!")
+//        return
+//    }
+//    print("Hey, \(middleName)")
+//}
+
+// bronze challenge -- refactoring use of guard
 func greetByMiddleName(name: (first: String, middle: String?, last: String)) {
-    guard let middleName = name.middle else {
+    guard let middleName = name.middle where middleName.characters.count < 4 else {
         print("Hey there!")
         return
     }
-    print("Hey, \(middleName)")
+    print("Hey, \(middleName)!")
 }
+
 greetByMiddleName(("Robert", "Henry", "Moses"))
 greetByMiddleName(("Robert", nil, "Moses"))
+greetByMiddleName(("Robert", "Kip", "Moses"))
 
+let groceryList = ["green beans", "milk", "black beans", "pinto beans", "apples"]
+func beanSifter(list: [String]) -> (beans: [String], otherGroceries: [String]) {
+    var beans = [String]()
+    var otherGroceries = [String]()
+    for item in list {
+        if item.hasSuffix("beans") {
+            beans.append(item)
+        } else {
+            otherGroceries.append(item)
+        }
+    }
+    return (beans, otherGroceries)
+}
+var sortedLists = beanSifter(groceryList)
+print(sortedLists.beans)
+print(sortedLists.otherGroceries)
