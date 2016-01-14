@@ -63,4 +63,26 @@ if let townPlan = makeTownGrand(10001, condition: evaluateBudget) {
 }
 print("The town has \(stopLights) stop lights.")
 
+func makeGrowthTracker(growth: Int) -> (() -> Int) {
+    var totalGrowth = 0
+    func growthTracker() -> Int {
+        totalGrowth += growth
+        return totalGrowth
+    }
+    return growthTracker
+}
 
+var townPopulation = 54234
+let growBy500 = makeGrowthTracker(500)
+growBy500()
+growBy500()
+growBy500()
+// closures are reference types
+let anotherGrowBy500 = growBy500
+anotherGrowBy500()
+anotherGrowBy500()
+
+let growBy100000 = makeGrowthTracker(100000)
+townPopulation += growBy100000()
+townPopulation += growBy500()
+print("The town's population is \(townPopulation).")
