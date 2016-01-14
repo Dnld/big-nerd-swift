@@ -86,3 +86,49 @@ let growBy100000 = makeGrowthTracker(100000)
 townPopulation += growBy100000()
 townPopulation += growBy500()
 print("The town's population is \(townPopulation).")
+
+
+///////////////////////////////////////////////
+//                  MAP                      //
+///////////////////////////////////////////////
+
+let precinctPopulations = [1244, 2021, 2157]
+let projectedPopulations = precinctPopulations.map {
+    (population: Int) -> Int in
+        return population * 2
+    }
+print(projectedPopulations)
+
+let precinctsToWords = precinctPopulations.map {
+    (population: Int) -> String in
+        if population > 2000 {
+            return "big"
+        } else {
+            return "small"
+        }
+    }
+print(precinctsToWords)
+
+///////////////////////////////////////////////
+//                 FILTER                    //
+///////////////////////////////////////////////
+
+let largePrecincts = projectedPopulations.filter {
+    (population: Int) -> Bool in
+        return population > 4000
+    }
+print(largePrecincts)
+
+///////////////////////////////////////////////
+//                 REDUCE                    //
+///////////////////////////////////////////////
+
+let bigProjections = largePrecincts.reduce(0) {
+    (totalProjection: Int, population: Int) -> Int in
+        return totalProjection + population
+    }
+print(bigProjections)
+
+// gold challenge
+let bigProjectionsRedux = largePrecincts.reduce(0, combine: +)
+print(bigProjectionsRedux)
