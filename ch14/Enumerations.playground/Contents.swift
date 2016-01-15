@@ -105,8 +105,19 @@ enum ShapeDimensions {
         switch self {
         case let .Square(side: s):
             return s * s
-        case let .Rectangle(height: w, width: h):
+        case let .Rectangle(height: h, width: w):
             return w * h
+        case .Point:
+            return 0
+        }
+    }
+    
+    func perimeter() -> Double {
+        switch self {
+        case let .Square(side: s):
+            return s * 4
+        case let .Rectangle(height: h, width: w):
+            return (h * 2) + (w * 2)
         case .Point:
             return 0
         }
@@ -118,7 +129,10 @@ var rectangle = ShapeDimensions.Rectangle(height: 10, width: 20)
 var point = ShapeDimensions.Point
 print("square's area is \(square.area())")
 print("rectangle's area is \(rectangle.area())")
-print("Point's area is \(point.area())")
+print("point's area is \(point.area())")
+print("square's perimeter is \(square.perimeter())")
+print("rectangle's perimeter is \(rectangle.perimeter())")
+print("point's perimeter is \(point.perimeter())")
 
 // recursive enums
 enum FamilyTree {
