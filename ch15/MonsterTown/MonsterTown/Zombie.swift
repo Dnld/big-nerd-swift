@@ -13,7 +13,12 @@ class Zombie: Monster {
     
     final override func terrorizeTown() {
         // this is optional chaining
-        town?.changePopulation(-10)
+        if town?.population >= 10 {
+            town?.changePopulation(-10)
+        } else {
+            let amountToKill = town?.population
+            town?.changePopulation(-amountToKill!)
+        }
         super.terrorizeTown()
     }
     
