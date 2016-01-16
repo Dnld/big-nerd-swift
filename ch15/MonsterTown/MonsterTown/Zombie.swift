@@ -11,6 +11,10 @@ import Foundation
 class Zombie: Monster {
     var walksWithLimp = true
     
+    class func makeSpookyNoise() -> String {
+        return "Brains..."
+    }
+    
     final override func terrorizeTown() {
         // this is optional chaining
         if town?.population >= 10 {
