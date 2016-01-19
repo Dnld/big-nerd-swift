@@ -8,8 +8,9 @@
 
 import Foundation
 
-var myTown = Town()
+//var myTown = Town()
 var myMayor = Mayor()
+var myTown = Town(region: "South", mayor: myMayor, population: 10000, stopLights: 5)
 //print(myMayor.anxietyLevel)
 myTown.mayor = myMayor
 print(myTown.townSize)
