@@ -9,8 +9,16 @@
 import Foundation
 
 class Town {
-    let region = "South"
-    var population = 5422
+    static let region = "South"
+    var mayor: Mayor?
+    var population = 5422 {
+        didSet(oldPopulation) {
+            if population < oldPopulation {
+                print("the population has changed to \(population) from \(oldPopulation)")
+                mayor?.logSympathy()
+            }
+        }
+    }
     var numberOfStopLights = 4
     
     enum Size {
@@ -19,16 +27,29 @@ class Town {
         case Large
     }
     
-    lazy var townSize: Size = {
-        switch self.population {
-        case 0...10000:
-            return Size.Small
-        case 10001...100000:
-            return Size.Medium
-        default:
-            return Size.Large
+//    lazy var townSize: Size = {
+//        switch self.population {
+//        case 0...10000:
+//            return Size.Small
+//        case 10001...100000:
+//            return Size.Medium
+//        default:
+//            return Size.Large
+//        }
+//    }()
+
+    var townSize: Size {
+        get {
+            switch self.population {
+            case 0...10000:
+                return Size.Small
+            case 10001...100000:
+                return Size.Medium
+            default:
+                return Size.Large
+            }
         }
-    }()
+    }
     
     func printTownDesctiption() {
         print("population: \(population); number of stop lights: \(numberOfStopLights)")

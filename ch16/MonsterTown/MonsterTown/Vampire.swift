@@ -9,12 +9,12 @@
 import Foundation
 
 class Vampire: Monster {
-    static var vampires = [Vampire]()
+    var vampires = [Vampire]()
     
     override func terrorizeTown() {
         if town?.population >= 1 {
             town?.changePopulation(-1)
-            Vampire.vampires.append(Vampire())
+            vampires.append(Vampire())
         }
         super.terrorizeTown()
     }
