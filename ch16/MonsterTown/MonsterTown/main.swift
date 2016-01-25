@@ -36,10 +36,10 @@ if Zombie.isTerrifying {
 let convenientZombie = Zombie(limp: true, isFallingApart: true)
 let requiredZombie = Zombie(town: myTown, monsterName: "Al")
 
-let myVampire = Vampire(town: myTown, monsterName: "Joe")
-myVampire.town = myTown
-myVampire.terrorizeTown()
-myVampire.terrorizeTown()
+let myVampire: Vampire? = Vampire(town: myTown, monsterName: "Joe")
+myVampire?.town = myTown
+myVampire?.terrorizeTown()
+myVampire?.terrorizeTown()
 myTown?.printTownDesctiption()
 //print(myVampire.vampires)
 

@@ -11,7 +11,7 @@ import Foundation
 class Monster {
     var town: Town?
 //    var name = "Monster"
-    var name: String
+    var name: String?
     static let isTerrifying = true
     
     class var spookyNoise: String {
@@ -27,9 +27,12 @@ class Monster {
         }
     }
     
-    required init(town: Town?, monsterName: String) {
-        self.town = town
+    required init?(town: Town?, monsterName: String?) {
+        if monsterName == "" || monsterName == nil {
+            return nil
+        }
         name = monsterName
+        self.town = town
     }
     
     func terrorizeTown() {
