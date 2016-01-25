@@ -33,14 +33,10 @@ func printTable(dataSource: protocol<TabularDataSource, CustomStringConvertible>
         return
     }
     
-    var firstRow = padding(maxRowLabelWidth) + " |"
-    
     var maxColunmWidths = [Int]()
     
     for columnLabel in columnLabels {
-        let columnHeader = " \(columnLabel) |"
-        firstRow += columnHeader
-        maxColunmWidths.append(columnHeader.characters.count)
+        maxColunmWidths.append(columnLabel.characters.count + 3)
     }
     
     for i in 0..<dataSource.numberOfRows {
@@ -50,6 +46,15 @@ func printTable(dataSource: protocol<TabularDataSource, CustomStringConvertible>
                 maxColunmWidths[j] = tempWidth
             }
         }
+    }
+    
+    var firstRow = padding(maxRowLabelWidth) + " |"
+    
+    for (i, columnLabel) in columnLabels.enumerate() {
+        let columnHeader = " \(columnLabel) |"
+        let paddingAmount = maxColunmWidths[i] - columnHeader.characters.count
+        firstRow += padding(paddingAmount) + columnHeader
+        maxColunmWidths.append(columnHeader.characters.count)
     }
     
     print(firstRow)
