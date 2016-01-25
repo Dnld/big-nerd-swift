@@ -10,36 +10,41 @@ import Foundation
 
 //var myTown = Town()
 var myMayor = Mayor()
-var myTown = Town(region: "South", mayor: myMayor, population: 10000, stopLights: 5)
+var myTown = Town(region: "South", mayor: myMayor, population: 0, stopLights: 5)
 //print(myMayor.anxietyLevel)
-myTown.mayor = myMayor
-print(myTown.townSize)
-myTown.changePopulation(100000)
-print(myTown.townSize)
+//myTown.mayor = myMayor
+print(myTown?.townSize)
+myTown?.changePopulation(100000)
+print(myTown?.townSize)
 //print("Population: \(myTown.population), number of stop lights \(myTown.numberOfStopLights)")
-myTown.changePopulation(500)
+myTown?.changePopulation(500)
 //myTown.printTownDesctiption()
 //let gm = Monster()
 //gm.town = myTown
 //gm.terrorizeTown()
-let fredTheZombie = Zombie()
-fredTheZombie.town = myTown
-fredTheZombie.changeName("Fred", walksWithLimp: true)
-fredTheZombie.terrorizeTown()
-fredTheZombie.town?.printTownDesctiption()
+var fredTheZombie: Zombie? = Zombie(limp: false, isFallingApart: false, town: myTown, monsterName: "Fred")
+fredTheZombie?.town = myTown
+fredTheZombie?.changeName("Fred", walksWithLimp: true)
+fredTheZombie?.terrorizeTown()
+fredTheZombie?.town?.printTownDesctiption()
 print(Zombie.spookyNoise)
 
 if Zombie.isTerrifying {
     print("Run away!")
 }
 
-let myVampire = Vampire()
+let convenientZombie = Zombie(limp: true, isFallingApart: true)
+let requiredZombie = Zombie(town: myTown, monsterName: "Al")
+
+let myVampire = Vampire(town: myTown, monsterName: "Joe")
 myVampire.town = myTown
 myVampire.terrorizeTown()
 myVampire.terrorizeTown()
-myTown.printTownDesctiption()
-print(myVampire.vampires)
+myTown?.printTownDesctiption()
+//print(myVampire.vampires)
 
-print("victim pool: \(fredTheZombie.victimPool)")
-fredTheZombie.victimPool = 500
-print("victim pool: \(fredTheZombie.victimPool)")
+print("victim pool: \(fredTheZombie?.victimPool)")
+fredTheZombie?.victimPool = 500
+print("victim pool: \(fredTheZombie?.victimPool)")
+
+fredTheZombie = nil
