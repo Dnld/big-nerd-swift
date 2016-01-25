@@ -35,12 +35,21 @@ func printTable(dataSource: protocol<TabularDataSource, CustomStringConvertible>
     
     var firstRow = padding(maxRowLabelWidth) + " |"
     
-    var colunmWidths = [Int]()
+    var maxColunmWidths = [Int]()
     
     for columnLabel in columnLabels {
         let columnHeader = " \(columnLabel) |"
         firstRow += columnHeader
-        colunmWidths.append(columnHeader.characters.count)
+        maxColunmWidths.append(columnHeader.characters.count)
+    }
+    
+    for i in 0..<dataSource.numberOfRows {
+        for j in 0..<dataSource.numberOfColumns {
+            let tempWidth = String(dataSource.itemForRow(i, column: j)).characters.count + 3
+            if tempWidth > maxColunmWidths[j] {
+                maxColunmWidths[j] = tempWidth
+            }
+        }
     }
     
     print(firstRow)
@@ -56,7 +65,7 @@ func printTable(dataSource: protocol<TabularDataSource, CustomStringConvertible>
         for j in 0..<dataSource.numberOfColumns {
             let item = dataSource.itemForRow(i, column: j)
             let itemString = " \(item) |"
-            let paddingAmount = colunmWidths[j] - itemString.characters.count
+            let paddingAmount = maxColunmWidths[j] - itemString.characters.count
             output += padding(paddingAmount) + itemString
         }
         print(output)
@@ -138,7 +147,7 @@ struct Department: TabularDataSource, CustomStringConvertible {
 }
 
 var department = Department(name: "Engineering")
-department.addPerson(Person(name: "Joe", age: 30, yearsOfExperience: 6))
+department.addPerson(Person(name: "Joe", age: 1000, yearsOfExperience: 6))
 department.addPerson(Person(name: "Karen", age: 40, yearsOfExperience: 18))
 department.addPerson(Person(name: "Fred", age: 50, yearsOfExperience: 20))
 
