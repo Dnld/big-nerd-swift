@@ -100,6 +100,22 @@ class Parser {
             throw Error.InvalidToken(token)
         }
     }
+    
+    func parse() throws -> Int {
+        // can use try here becasuse parse throws -- that is error handling
+        var value = try getNumber()
+        
+        while let token = getNextToken() {
+            switch token {
+            case .Plus:
+                let nextNumber = try getNumber()
+                value += nextNumber
+            case .Number:
+                throw Error.InvalidToken(token)
+            }
+        }
+        return value
+    }
 }
 
 func evaluate(input: String) {
@@ -108,12 +124,21 @@ func evaluate(input: String) {
     do {
         let tokens = try lexer.lex()
         print("Lexer output: \(tokens)")
+        let parser = Parser(tokens: tokens)
+        let result = try parser.parse()
+        print("Parser output: \(result)")
     } catch Lexer.Error.InvalidCharacter(let character) {
         print("Input contained an invalid character: \(character)")
+    } catch Parser.Error.UnexpectedEndOfInput {
+        print("Unexpected end of input during parsing")
+    } catch Parser.Error.InvalidToken(let token) {
+        print("Invalid token during parsing: \(token)")
     } catch {
         print("An error occured: \(error)")
     }
 }
 
 evaluate("10 + 3 + 5")
-//evaluate("10 + 3 + 5 + dsfdas")
+evaluate("10 + 3 + 5 + dsfdas")
+evaluate("10 + ")
+evaluate("10 + 1 1")
