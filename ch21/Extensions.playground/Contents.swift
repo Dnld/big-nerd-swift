@@ -18,6 +18,7 @@ struct Car {
     let make: String
     let model: String
     let year: Int
+    let numberOfDoors: Int
     let color: String
     let nickname: String
     var gasLevel: Double {
@@ -31,23 +32,23 @@ struct Car {
 // an extension to conform to the vehicle protocol
 extension Car: VehicleType {
     var topSpeed: Velocity { return 180 }
-    var numberOfDoors: Int { return 4 }
     var hasFlatbed: Bool { return false }
 }
 
 // extension to car to add an init method
 extension Car {
-    init (carMake: String, carModel: String, carYear: Int) {
+    init (carMake: String, carModel: String, carYear: Int, carDoors: Int) {
         self.init(make: carMake,
             model: carModel,
             year: carYear,
+            numberOfDoors: carDoors,
             color: "Black",
             nickname: "N/A",
             gasLevel: 1.0)
     }
 }
 
-var c = Car(carMake: "Ford", carModel: "Fusion", carYear: 2013)
+var c = Car(carMake: "Ford", carModel: "Fusion", carYear: 2013, carDoors: 4)
 print(c.topSpeed.kph)
 
 extension Car {
@@ -91,3 +92,10 @@ c.emptyGas(0.5)
 print(c.gasLevel)
 c.fillGas()
 print(c.gasLevel)
+
+extension Int {
+    var timesFive: Int { return self * 5 }
+}
+
+var a: Int = 5
+print(a.timesFive)
