@@ -12,7 +12,7 @@ class Lexer {
     let input: String.CharacterView
     var position: String.CharacterView.Index
     enum Error: ErrorType {
-        case InvalidCharacter(Character)
+        case InvalidCharacter(Character, String.CharacterView.Index)
     }
     
     init (input: String) {
@@ -65,8 +65,7 @@ class Lexer {
             case " ":
                 advance()
             default:
-                throw Error.InvalidCharacter(nextCharacter)
-        
+                throw Error.InvalidCharacter(nextCharacter, position)
             }
         }
             
@@ -134,8 +133,8 @@ func evaluate(input: String) {
         let parser = Parser(tokens: tokens)
         let result = try parser.parse()
         print("Parser output: \(result)")
-    } catch Lexer.Error.InvalidCharacter(let character) {
-        print("Input contained an invalid character: \(character)")
+    } catch Lexer.Error.InvalidCharacter(let character, let index) {
+        print("Input contained an invalid character at index \(index): \(character)")
     } catch Parser.Error.UnexpectedEndOfInput {
         print("Unexpected end of input during parsing")
     } catch Parser.Error.InvalidToken(let token) {
