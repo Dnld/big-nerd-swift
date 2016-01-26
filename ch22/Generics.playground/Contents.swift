@@ -2,7 +2,17 @@
 
 import Cocoa
 
-struct Stack<Element> {
+struct StackGenerator<T>: GeneratorType {
+    typealias Element = T
+    
+    var stack: Stack<T>
+    
+    mutating func next() -> Element? {
+        return stack.pop()
+    }
+}
+
+struct Stack<Element>: SequenceType {
     var items = [Element]()
     
     mutating func push(newItem: Element) {
@@ -13,7 +23,6 @@ struct Stack<Element> {
         if items.count > 0 {
             return items.removeLast()
         } else {
-            print("No items in stack")
             return nil
         }
     }
@@ -25,6 +34,10 @@ struct Stack<Element> {
             result.append(f(item))
         }
         return Stack<U>(items: result)
+    }
+    
+    func generate() -> StackGenerator<Element> {
+        return StackGenerator(stack: self)
     }
 }
 
@@ -59,3 +72,33 @@ intStack.push(3)
 
 var doubleStack = intStack.map { $0 * 2 }
 print(doubleStack.items)
+
+func checkIfEqual<T: Equatable>(first: T, _ second: T) -> Bool {
+    return first == second
+}
+
+print(checkIfEqual(1, 1))
+print(checkIfEqual("a string", "a string"))
+print(checkIfEqual("1", 1))
+
+func checkIfDescriptionMatches<T: CustomStringConvertible, U: CustomStringConvertible>(first: T, _ second: U) -> Bool {
+    return first.description == second.description
+}
+
+print(checkIfDescriptionMatches(Int(1), UInt(1)))
+print(checkIfDescriptionMatches(1, 1.0))
+print(checkIfDescriptionMatches(Float(1.0), Double(1.0)))
+
+var myStack = Stack<Int>()
+myStack.push(1)
+myStack.push(5)
+myStack.push(77)
+
+var myStackGenerator = StackGenerator(stack: myStack)
+while let value = myStackGenerator.next() {
+    print(value)
+}
+
+for value in myStack {
+    print(value)
+}
