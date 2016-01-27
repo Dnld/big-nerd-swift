@@ -7,62 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A5492421C58628A007CE87F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5492411C58628A007CE87F /* AppDelegate.swift */; };
-		6A5492441C58628A007CE87F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5492431C58628A007CE87F /* ViewController.swift */; };
-		6A5492461C58628A007CE87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A5492451C58628A007CE87F /* Assets.xcassets */; };
-		6A5492491C58628A007CE87F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5492471C58628A007CE87F /* Main.storyboard */; };
-		6A5492541C58628A007CE87F /* VocalTextEditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5492531C58628A007CE87F /* VocalTextEditTests.swift */; };
-		6A54925F1C58628A007CE87F /* VocalTextEditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A54925E1C58628A007CE87F /* VocalTextEditUITests.swift */; };
+		6A5492791C586F46007CE87F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5492781C586F46007CE87F /* AppDelegate.swift */; };
+		6A54927B1C586F46007CE87F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A54927A1C586F46007CE87F /* ViewController.swift */; };
+		6A54927D1C586F46007CE87F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A54927C1C586F46007CE87F /* Document.swift */; };
+		6A54927F1C586F46007CE87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A54927E1C586F46007CE87F /* Assets.xcassets */; };
+		6A5492821C586F46007CE87F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5492801C586F46007CE87F /* Main.storyboard */; };
+		6A54928D1C586F46007CE87F /* VocalTextEditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A54928C1C586F46007CE87F /* VocalTextEditTests.swift */; };
+		6A5492981C586F46007CE87F /* VocalTextEditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5492971C586F46007CE87F /* VocalTextEditUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6A5492501C58628A007CE87F /* PBXContainerItemProxy */ = {
+		6A5492891C586F46007CE87F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6A5492361C58628A007CE87F /* Project object */;
+			containerPortal = 6A54926D1C586F46007CE87F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6A54923D1C58628A007CE87F;
+			remoteGlobalIDString = 6A5492741C586F46007CE87F;
 			remoteInfo = VocalTextEdit;
 		};
-		6A54925B1C58628A007CE87F /* PBXContainerItemProxy */ = {
+		6A5492941C586F46007CE87F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6A5492361C58628A007CE87F /* Project object */;
+			containerPortal = 6A54926D1C586F46007CE87F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6A54923D1C58628A007CE87F;
+			remoteGlobalIDString = 6A5492741C586F46007CE87F;
 			remoteInfo = VocalTextEdit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6A54923E1C58628A007CE87F /* VocalTextEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocalTextEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A5492411C58628A007CE87F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A5492431C58628A007CE87F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6A5492451C58628A007CE87F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6A5492481C58628A007CE87F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6A54924A1C58628A007CE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A54924F1C58628A007CE87F /* VocalTextEditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocalTextEditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A5492531C58628A007CE87F /* VocalTextEditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocalTextEditTests.swift; sourceTree = "<group>"; };
-		6A5492551C58628A007CE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A54925A1C58628A007CE87F /* VocalTextEditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocalTextEditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A54925E1C58628A007CE87F /* VocalTextEditUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocalTextEditUITests.swift; sourceTree = "<group>"; };
-		6A5492601C58628A007CE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A5492751C586F46007CE87F /* VocalTextEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocalTextEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5492781C586F46007CE87F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6A54927A1C586F46007CE87F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A54927C1C586F46007CE87F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		6A54927E1C586F46007CE87F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A5492811C586F46007CE87F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6A5492831C586F46007CE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A5492881C586F46007CE87F /* VocalTextEditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocalTextEditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A54928C1C586F46007CE87F /* VocalTextEditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocalTextEditTests.swift; sourceTree = "<group>"; };
+		6A54928E1C586F46007CE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A5492931C586F46007CE87F /* VocalTextEditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocalTextEditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5492971C586F46007CE87F /* VocalTextEditUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocalTextEditUITests.swift; sourceTree = "<group>"; };
+		6A5492991C586F46007CE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6A54923B1C58628A007CE87F /* Frameworks */ = {
+		6A5492721C586F46007CE87F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A54924C1C58628A007CE87F /* Frameworks */ = {
+		6A5492851C586F46007CE87F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A5492571C58628A007CE87F /* Frameworks */ = {
+		6A5492901C586F46007CE87F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,52 +74,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6A5492351C58628A007CE87F = {
+		6A54926C1C586F46007CE87F = {
 			isa = PBXGroup;
 			children = (
-				6A5492401C58628A007CE87F /* VocalTextEdit */,
-				6A5492521C58628A007CE87F /* VocalTextEditTests */,
-				6A54925D1C58628A007CE87F /* VocalTextEditUITests */,
-				6A54923F1C58628A007CE87F /* Products */,
+				6A5492771C586F46007CE87F /* VocalTextEdit */,
+				6A54928B1C586F46007CE87F /* VocalTextEditTests */,
+				6A5492961C586F46007CE87F /* VocalTextEditUITests */,
+				6A5492761C586F46007CE87F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		6A54923F1C58628A007CE87F /* Products */ = {
+		6A5492761C586F46007CE87F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A54923E1C58628A007CE87F /* VocalTextEdit.app */,
-				6A54924F1C58628A007CE87F /* VocalTextEditTests.xctest */,
-				6A54925A1C58628A007CE87F /* VocalTextEditUITests.xctest */,
+				6A5492751C586F46007CE87F /* VocalTextEdit.app */,
+				6A5492881C586F46007CE87F /* VocalTextEditTests.xctest */,
+				6A5492931C586F46007CE87F /* VocalTextEditUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6A5492401C58628A007CE87F /* VocalTextEdit */ = {
+		6A5492771C586F46007CE87F /* VocalTextEdit */ = {
 			isa = PBXGroup;
 			children = (
-				6A5492411C58628A007CE87F /* AppDelegate.swift */,
-				6A5492431C58628A007CE87F /* ViewController.swift */,
-				6A5492451C58628A007CE87F /* Assets.xcassets */,
-				6A5492471C58628A007CE87F /* Main.storyboard */,
-				6A54924A1C58628A007CE87F /* Info.plist */,
+				6A5492781C586F46007CE87F /* AppDelegate.swift */,
+				6A54927A1C586F46007CE87F /* ViewController.swift */,
+				6A54927C1C586F46007CE87F /* Document.swift */,
+				6A54927E1C586F46007CE87F /* Assets.xcassets */,
+				6A5492801C586F46007CE87F /* Main.storyboard */,
+				6A5492831C586F46007CE87F /* Info.plist */,
 			);
 			path = VocalTextEdit;
 			sourceTree = "<group>";
 		};
-		6A5492521C58628A007CE87F /* VocalTextEditTests */ = {
+		6A54928B1C586F46007CE87F /* VocalTextEditTests */ = {
 			isa = PBXGroup;
 			children = (
-				6A5492531C58628A007CE87F /* VocalTextEditTests.swift */,
-				6A5492551C58628A007CE87F /* Info.plist */,
+				6A54928C1C586F46007CE87F /* VocalTextEditTests.swift */,
+				6A54928E1C586F46007CE87F /* Info.plist */,
 			);
 			path = VocalTextEditTests;
 			sourceTree = "<group>";
 		};
-		6A54925D1C58628A007CE87F /* VocalTextEditUITests */ = {
+		6A5492961C586F46007CE87F /* VocalTextEditUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6A54925E1C58628A007CE87F /* VocalTextEditUITests.swift */,
-				6A5492601C58628A007CE87F /* Info.plist */,
+				6A5492971C586F46007CE87F /* VocalTextEditUITests.swift */,
+				6A5492991C586F46007CE87F /* Info.plist */,
 			);
 			path = VocalTextEditUITests;
 			sourceTree = "<group>";
@@ -125,13 +128,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6A54923D1C58628A007CE87F /* VocalTextEdit */ = {
+		6A5492741C586F46007CE87F /* VocalTextEdit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A5492631C58628A007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEdit" */;
+			buildConfigurationList = 6A54929C1C586F46007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEdit" */;
 			buildPhases = (
-				6A54923A1C58628A007CE87F /* Sources */,
-				6A54923B1C58628A007CE87F /* Frameworks */,
-				6A54923C1C58628A007CE87F /* Resources */,
+				6A5492711C586F46007CE87F /* Sources */,
+				6A5492721C586F46007CE87F /* Frameworks */,
+				6A5492731C586F46007CE87F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -139,69 +142,69 @@
 			);
 			name = VocalTextEdit;
 			productName = VocalTextEdit;
-			productReference = 6A54923E1C58628A007CE87F /* VocalTextEdit.app */;
+			productReference = 6A5492751C586F46007CE87F /* VocalTextEdit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6A54924E1C58628A007CE87F /* VocalTextEditTests */ = {
+		6A5492871C586F46007CE87F /* VocalTextEditTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A5492661C58628A007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEditTests" */;
+			buildConfigurationList = 6A54929F1C586F46007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEditTests" */;
 			buildPhases = (
-				6A54924B1C58628A007CE87F /* Sources */,
-				6A54924C1C58628A007CE87F /* Frameworks */,
-				6A54924D1C58628A007CE87F /* Resources */,
+				6A5492841C586F46007CE87F /* Sources */,
+				6A5492851C586F46007CE87F /* Frameworks */,
+				6A5492861C586F46007CE87F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6A5492511C58628A007CE87F /* PBXTargetDependency */,
+				6A54928A1C586F46007CE87F /* PBXTargetDependency */,
 			);
 			name = VocalTextEditTests;
 			productName = VocalTextEditTests;
-			productReference = 6A54924F1C58628A007CE87F /* VocalTextEditTests.xctest */;
+			productReference = 6A5492881C586F46007CE87F /* VocalTextEditTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6A5492591C58628A007CE87F /* VocalTextEditUITests */ = {
+		6A5492921C586F46007CE87F /* VocalTextEditUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A5492691C58628A007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEditUITests" */;
+			buildConfigurationList = 6A5492A21C586F46007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEditUITests" */;
 			buildPhases = (
-				6A5492561C58628A007CE87F /* Sources */,
-				6A5492571C58628A007CE87F /* Frameworks */,
-				6A5492581C58628A007CE87F /* Resources */,
+				6A54928F1C586F46007CE87F /* Sources */,
+				6A5492901C586F46007CE87F /* Frameworks */,
+				6A5492911C586F46007CE87F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6A54925C1C58628A007CE87F /* PBXTargetDependency */,
+				6A5492951C586F46007CE87F /* PBXTargetDependency */,
 			);
 			name = VocalTextEditUITests;
 			productName = VocalTextEditUITests;
-			productReference = 6A54925A1C58628A007CE87F /* VocalTextEditUITests.xctest */;
+			productReference = 6A5492931C586F46007CE87F /* VocalTextEditUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6A5492361C58628A007CE87F /* Project object */ = {
+		6A54926D1C586F46007CE87F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Donald Steinert";
 				TargetAttributes = {
-					6A54923D1C58628A007CE87F = {
+					6A5492741C586F46007CE87F = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					6A54924E1C58628A007CE87F = {
+					6A5492871C586F46007CE87F = {
 						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 6A54923D1C58628A007CE87F;
+						TestTargetID = 6A5492741C586F46007CE87F;
 					};
-					6A5492591C58628A007CE87F = {
+					6A5492921C586F46007CE87F = {
 						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 6A54923D1C58628A007CE87F;
+						TestTargetID = 6A5492741C586F46007CE87F;
 					};
 				};
 			};
-			buildConfigurationList = 6A5492391C58628A007CE87F /* Build configuration list for PBXProject "VocalTextEdit" */;
+			buildConfigurationList = 6A5492701C586F46007CE87F /* Build configuration list for PBXProject "VocalTextEdit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -209,36 +212,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 6A5492351C58628A007CE87F;
-			productRefGroup = 6A54923F1C58628A007CE87F /* Products */;
+			mainGroup = 6A54926C1C586F46007CE87F;
+			productRefGroup = 6A5492761C586F46007CE87F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6A54923D1C58628A007CE87F /* VocalTextEdit */,
-				6A54924E1C58628A007CE87F /* VocalTextEditTests */,
-				6A5492591C58628A007CE87F /* VocalTextEditUITests */,
+				6A5492741C586F46007CE87F /* VocalTextEdit */,
+				6A5492871C586F46007CE87F /* VocalTextEditTests */,
+				6A5492921C586F46007CE87F /* VocalTextEditUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6A54923C1C58628A007CE87F /* Resources */ = {
+		6A5492731C586F46007CE87F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A5492461C58628A007CE87F /* Assets.xcassets in Resources */,
-				6A5492491C58628A007CE87F /* Main.storyboard in Resources */,
+				6A54927F1C586F46007CE87F /* Assets.xcassets in Resources */,
+				6A5492821C586F46007CE87F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A54924D1C58628A007CE87F /* Resources */ = {
+		6A5492861C586F46007CE87F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A5492581C58628A007CE87F /* Resources */ = {
+		6A5492911C586F46007CE87F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -248,51 +251,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6A54923A1C58628A007CE87F /* Sources */ = {
+		6A5492711C586F46007CE87F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A5492441C58628A007CE87F /* ViewController.swift in Sources */,
-				6A5492421C58628A007CE87F /* AppDelegate.swift in Sources */,
+				6A54927B1C586F46007CE87F /* ViewController.swift in Sources */,
+				6A5492791C586F46007CE87F /* AppDelegate.swift in Sources */,
+				6A54927D1C586F46007CE87F /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A54924B1C58628A007CE87F /* Sources */ = {
+		6A5492841C586F46007CE87F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A5492541C58628A007CE87F /* VocalTextEditTests.swift in Sources */,
+				6A54928D1C586F46007CE87F /* VocalTextEditTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A5492561C58628A007CE87F /* Sources */ = {
+		6A54928F1C586F46007CE87F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A54925F1C58628A007CE87F /* VocalTextEditUITests.swift in Sources */,
+				6A5492981C586F46007CE87F /* VocalTextEditUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6A5492511C58628A007CE87F /* PBXTargetDependency */ = {
+		6A54928A1C586F46007CE87F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6A54923D1C58628A007CE87F /* VocalTextEdit */;
-			targetProxy = 6A5492501C58628A007CE87F /* PBXContainerItemProxy */;
+			target = 6A5492741C586F46007CE87F /* VocalTextEdit */;
+			targetProxy = 6A5492891C586F46007CE87F /* PBXContainerItemProxy */;
 		};
-		6A54925C1C58628A007CE87F /* PBXTargetDependency */ = {
+		6A5492951C586F46007CE87F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6A54923D1C58628A007CE87F /* VocalTextEdit */;
-			targetProxy = 6A54925B1C58628A007CE87F /* PBXContainerItemProxy */;
+			target = 6A5492741C586F46007CE87F /* VocalTextEdit */;
+			targetProxy = 6A5492941C586F46007CE87F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6A5492471C58628A007CE87F /* Main.storyboard */ = {
+		6A5492801C586F46007CE87F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6A5492481C58628A007CE87F /* Base */,
+				6A5492811C586F46007CE87F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -300,7 +304,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6A5492611C58628A007CE87F /* Debug */ = {
+		6A54929A1C586F46007CE87F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -344,7 +348,7 @@
 			};
 			name = Debug;
 		};
-		6A5492621C58628A007CE87F /* Release */ = {
+		6A54929B1C586F46007CE87F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -380,7 +384,7 @@
 			};
 			name = Release;
 		};
-		6A5492641C58628A007CE87F /* Debug */ = {
+		6A54929D1C586F46007CE87F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -392,7 +396,7 @@
 			};
 			name = Debug;
 		};
-		6A5492651C58628A007CE87F /* Release */ = {
+		6A54929E1C586F46007CE87F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -404,7 +408,7 @@
 			};
 			name = Release;
 		};
-		6A5492671C58628A007CE87F /* Debug */ = {
+		6A5492A01C586F46007CE87F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -417,7 +421,7 @@
 			};
 			name = Debug;
 		};
-		6A5492681C58628A007CE87F /* Release */ = {
+		6A5492A11C586F46007CE87F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -430,7 +434,7 @@
 			};
 			name = Release;
 		};
-		6A54926A1C58628A007CE87F /* Debug */ = {
+		6A5492A31C586F46007CE87F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -443,7 +447,7 @@
 			};
 			name = Debug;
 		};
-		6A54926B1C58628A007CE87F /* Release */ = {
+		6A5492A41C586F46007CE87F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -459,40 +463,40 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6A5492391C58628A007CE87F /* Build configuration list for PBXProject "VocalTextEdit" */ = {
+		6A5492701C586F46007CE87F /* Build configuration list for PBXProject "VocalTextEdit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A5492611C58628A007CE87F /* Debug */,
-				6A5492621C58628A007CE87F /* Release */,
+				6A54929A1C586F46007CE87F /* Debug */,
+				6A54929B1C586F46007CE87F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A5492631C58628A007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEdit" */ = {
+		6A54929C1C586F46007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEdit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A5492641C58628A007CE87F /* Debug */,
-				6A5492651C58628A007CE87F /* Release */,
+				6A54929D1C586F46007CE87F /* Debug */,
+				6A54929E1C586F46007CE87F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		6A5492661C58628A007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEditTests" */ = {
+		6A54929F1C586F46007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEditTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A5492671C58628A007CE87F /* Debug */,
-				6A5492681C58628A007CE87F /* Release */,
+				6A5492A01C586F46007CE87F /* Debug */,
+				6A5492A11C586F46007CE87F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		6A5492691C58628A007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEditUITests" */ = {
+		6A5492A21C586F46007CE87F /* Build configuration list for PBXNativeTarget "VocalTextEditUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A54926A1C58628A007CE87F /* Debug */,
-				6A54926B1C58628A007CE87F /* Release */,
+				6A5492A31C586F46007CE87F /* Debug */,
+				6A5492A41C586F46007CE87F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6A5492361C58628A007CE87F /* Project object */;
+	rootObject = 6A54926D1C586F46007CE87F /* Project object */;
 }

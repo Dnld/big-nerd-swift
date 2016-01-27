@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6A54923D1C58628A007CE87F"
+               BlueprintIdentifier = "6A5492741C586F46007CE87F"
                BuildableName = "VocalTextEdit.app"
                BlueprintName = "VocalTextEdit"
                ReferencedContainer = "container:VocalTextEdit.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6A54924E1C58628A007CE87F"
+               BlueprintIdentifier = "6A5492871C586F46007CE87F"
                BuildableName = "VocalTextEditTests.xctest"
                BlueprintName = "VocalTextEditTests"
                ReferencedContainer = "container:VocalTextEdit.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6A5492591C58628A007CE87F"
+               BlueprintIdentifier = "6A5492921C586F46007CE87F"
                BuildableName = "VocalTextEditUITests.xctest"
                BlueprintName = "VocalTextEditUITests"
                ReferencedContainer = "container:VocalTextEdit.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6A54923D1C58628A007CE87F"
+            BlueprintIdentifier = "6A5492741C586F46007CE87F"
             BuildableName = "VocalTextEdit.app"
             BlueprintName = "VocalTextEdit"
             ReferencedContainer = "container:VocalTextEdit.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6A54923D1C58628A007CE87F"
+            BlueprintIdentifier = "6A5492741C586F46007CE87F"
             BuildableName = "VocalTextEdit.app"
             BlueprintName = "VocalTextEdit"
             ReferencedContainer = "container:VocalTextEdit.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6A54923D1C58628A007CE87F"
+            BlueprintIdentifier = "6A5492741C586F46007CE87F"
             BuildableName = "VocalTextEdit.app"
             BlueprintName = "VocalTextEdit"
             ReferencedContainer = "container:VocalTextEdit.xcodeproj">
