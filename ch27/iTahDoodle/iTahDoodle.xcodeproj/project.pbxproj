@@ -12,6 +12,7 @@
 		6A5492B71C5912DB007CE87F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5492B51C5912DB007CE87F /* Main.storyboard */; };
 		6A5492B91C5912DB007CE87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A5492B81C5912DB007CE87F /* Assets.xcassets */; };
 		6A5492BC1C5912DB007CE87F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5492BA1C5912DB007CE87F /* LaunchScreen.storyboard */; };
+		6A5492C41C591B97007CE87F /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5492C31C591B97007CE87F /* TodoList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6A5492B81C5912DB007CE87F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A5492BB1C5912DB007CE87F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A5492BD1C5912DB007CE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A5492C31C591B97007CE87F /* TodoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				6A5492B11C5912DB007CE87F /* AppDelegate.swift */,
 				6A5492B31C5912DB007CE87F /* ViewController.swift */,
 				6A5492B51C5912DB007CE87F /* Main.storyboard */,
+				6A5492C31C591B97007CE87F /* TodoList.swift */,
 				6A5492B81C5912DB007CE87F /* Assets.xcassets */,
 				6A5492BA1C5912DB007CE87F /* LaunchScreen.storyboard */,
 				6A5492BD1C5912DB007CE87F /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A5492C41C591B97007CE87F /* TodoList.swift in Sources */,
 				6A5492B41C5912DB007CE87F /* ViewController.swift in Sources */,
 				6A5492B21C5912DB007CE87F /* AppDelegate.swift in Sources */,
 			);

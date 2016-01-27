@@ -21,6 +21,9 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kae-R5-DYK">
                                 <rect key="frame" x="540" y="28" width="40" height="30"/>
                                 <state key="normal" title="Insert"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IO9-gi-sZh"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cl9-RG-J1L">
                                 <rect key="frame" x="20" y="28" width="512" height="30"/>
@@ -45,6 +48,10 @@
                             <constraint firstItem="Kae-R5-DYK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yjB-5V-fEZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemTextField" destination="Cl9-RG-J1L" id="Jaw-MU-w4q"/>
+                        <outlet property="tableView" destination="kt6-pD-wTt" id="Gwq-Ii-v6d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
