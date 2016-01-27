@@ -50,3 +50,27 @@ var people = [p1, p2]
 let location = people.indexOf() { $0.name == "Doug" }
 print(location)
 
+// custom operators
+class newPerson {
+    var name: String
+    weak var spouse: newPerson?
+    
+    init(name: String, spouse: newPerson?) {
+        self.name = name
+        self.spouse = spouse
+    }
+}
+
+let matt = newPerson(name: "Matt", spouse: nil)
+let drew = newPerson(name: "Drew", spouse: nil)
+
+infix operator +++ {}
+
+func +++(lhs: newPerson, rhs: newPerson) {
+    lhs.spouse = rhs
+    rhs.spouse = lhs
+}
+
+matt +++ drew
+print(matt.spouse?.spouse?.name)
+
