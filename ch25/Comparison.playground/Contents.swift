@@ -15,6 +15,10 @@ func <(lhs: Point, rhs: Point) -> Bool {
     return (lhs.x < rhs.x) && (lhs.y < rhs.y)
 }
 
+func +(lhs: Point, rhs: Point) -> Point {
+    return Point(x: (lhs.x + rhs.x), y: (lhs.y + rhs.y))
+}
+
 let a = Point(x: 3, y: 4)
 let b = Point(x: 3, y: 4)
 let abEqual = (a == b)
@@ -26,3 +30,6 @@ let d = Point(x: 3, y: 7)
 
 print(c == d)
 print(c < d)
+
+let cd = c + d
+print(cd)
