@@ -22,10 +22,6 @@ class TodoList: NSObject {
         loadItems()
     }
     
-    func itemCount() -> Int {
-        return items.count
-    }
-    
     func registerClassForTableView(tableView: UITableView) {
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
@@ -47,6 +43,11 @@ class TodoList: NSObject {
     
     func addItem(item: String) {
         items.append(item)
+        saveItems()
+    }
+    
+    func removeItem(index: Int) {
+        items.removeAtIndex(index)
         saveItems()
     }
     
