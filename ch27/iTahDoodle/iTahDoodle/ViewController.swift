@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         }
         todoList.addItem(text)
         tableView.reloadData()
+        itemTextField.text = ""
     }
 
 }
