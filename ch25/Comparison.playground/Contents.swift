@@ -33,3 +33,20 @@ print(c < d)
 
 let cd = c + d
 print(cd)
+
+class Person {
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+let p1 = Person(name: "Joe", age: 19)
+let p2 = Person(name: "Doug", age: 27)
+var people = [p1, p2]
+let location = people.indexOf() { $0.name == "Doug" }
+print(location)
+
