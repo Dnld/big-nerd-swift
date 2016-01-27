@@ -11,9 +11,14 @@ import Cocoa
 class ViewController: NSViewController {
 
     let speechSynthesizer = NSSpeechSynthesizer()
+    let synthesizerDelegate = NSSpeechSynthesizerDelegate.self
+    
     
     @IBOutlet var textView: NSTextView!
-
+    
+    @IBOutlet weak var btnSpeak: NSButton!
+    @IBOutlet weak var btnStop: NSButton!
+    
     var contents: String? {
         get {
             return textView.string
@@ -23,16 +28,27 @@ class ViewController: NSViewController {
     }
     
     @IBAction func speakButtonClicked(sender: NSButton) {
-        if let contents = textView.string where !contents.isEmpty {
-            speechSynthesizer.startSpeakingString(contents)
+        
+        if speechSynthesizer.speaking {
+            return
         } else {
-            speechSynthesizer.startSpeakingString("The document is empty")
+            btnSpeak.enabled = false
+            btnStop.enabled = true
+            NSSpeechSynthesizerDelegate(speechSynthesizer, didChange(<#T##changeKind: NSKeyValueChange##NSKeyValueChange#>, valuesAtIndexes: <#T##NSIndexSet#>, forKey: <#T##String#>)
+            if let contents = textView.string where !contents.isEmpty {
+                speechSynthesizer.startSpeakingString(contents)
+            } else {
+                speechSynthesizer.startSpeakingString("The document is empty")
+            }
         }
+        
     }
 
     @IBAction func stopButtonClicked(sender: NSButton) {
-        speechSynthesizer.stopSpeaking()
+        if speechSynthesizer.speaking {
+            speechSynthesizer.stopSpeaking()
+        }
     }
-
+    
 }
 

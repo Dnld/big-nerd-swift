@@ -713,7 +713,7 @@
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dwr-cE-iSL">
                                 <rect key="frame" x="318" y="222" width="69" height="32"/>
-                                <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a8M-Dx-6UJ">
+                                <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a8M-Dx-6UJ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -734,6 +734,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnSpeak" destination="K4R-jc-cTF" id="zYb-5t-gc8"/>
+                        <outlet property="btnStop" destination="dwr-cE-iSL" id="46k-c3-5zh"/>
+                        <outlet property="speakButton" destination="K4R-jc-cTF" id="5Gf-3h-9or"/>
                         <outlet property="textView" destination="y9o-7I-RiI" id="cR0-Qv-GfL"/>
                     </connections>
                 </viewController>
