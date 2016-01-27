@@ -34,7 +34,7 @@ class ViewController: NSViewController {
         } else {
             btnSpeak.enabled = false
             btnStop.enabled = true
-            NSSpeechSynthesizerDelegate(speechSynthesizer, didChange(<#T##changeKind: NSKeyValueChange##NSKeyValueChange#>, valuesAtIndexes: <#T##NSIndexSet#>, forKey: <#T##String#>)
+            NSSpeechSynthesizerDelegate(speechSynthesizer, did
             if let contents = textView.string where !contents.isEmpty {
                 speechSynthesizer.startSpeakingString(contents)
             } else {
