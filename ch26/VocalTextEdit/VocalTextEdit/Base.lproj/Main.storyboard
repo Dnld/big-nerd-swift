@@ -683,16 +683,6 @@
                                     <action selector="speakButtonClicked:" target="5gI-5U-AMq" id="70P-0D-vK0"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yhi-kn-mrN">
-                                <rect key="frame" x="306" y="222" width="81" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IRM-ts-7T3">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="stopButtonClicked:" target="5gI-5U-AMq" id="ahD-hn-um6"/>
-                                </connections>
-                            </button>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81x-Dz-8eN">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="209"/>
                                 <clipView key="contentView" id="tyK-VW-87s">
@@ -721,16 +711,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dwr-cE-iSL">
+                                <rect key="frame" x="318" y="222" width="69" height="32"/>
+                                <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a8M-Dx-6UJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="stopButtonClicked:" target="5gI-5U-AMq" id="N06-5j-PgY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="K4R-jc-cTF" secondAttribute="trailing" constant="21" id="3KE-zU-4tq"/>
+                            <constraint firstItem="dwr-cE-iSL" firstAttribute="baseline" secondItem="K4R-jc-cTF" secondAttribute="baseline" id="5uq-Fo-kfc"/>
                             <constraint firstAttribute="trailing" secondItem="81x-Dz-8eN" secondAttribute="trailing" id="GGy-Fc-dpJ"/>
                             <constraint firstItem="81x-Dz-8eN" firstAttribute="top" secondItem="K4R-jc-cTF" secondAttribute="bottom" constant="20" id="LGJ-za-HK9"/>
-                            <constraint firstItem="Yhi-kn-mrN" firstAttribute="baseline" secondItem="K4R-jc-cTF" secondAttribute="baseline" id="Mjq-X1-jgQ"/>
                             <constraint firstItem="81x-Dz-8eN" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="RWp-nx-ppr"/>
                             <constraint firstAttribute="bottom" secondItem="81x-Dz-8eN" secondAttribute="bottom" id="WvX-95-kGl"/>
-                            <constraint firstItem="K4R-jc-cTF" firstAttribute="leading" secondItem="Yhi-kn-mrN" secondAttribute="trailing" constant="12" id="dUZ-p6-RSy"/>
                             <constraint firstItem="K4R-jc-cTF" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="lTs-qj-KoJ"/>
+                            <constraint firstItem="K4R-jc-cTF" firstAttribute="leading" secondItem="dwr-cE-iSL" secondAttribute="trailing" constant="12" id="qW4-yW-cde"/>
                         </constraints>
                     </view>
                     <connections>
