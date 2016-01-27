@@ -8,11 +8,9 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSSpeechSynthesizerDelegate {
 
     let speechSynthesizer = NSSpeechSynthesizer()
-    let synthesizerDelegate = NSSpeechSynthesizerDelegate.self
-    
     
     @IBOutlet var textView: NSTextView!
     
@@ -27,6 +25,10 @@ class ViewController: NSViewController {
         }
     }
     
+    override func viewDidLoad() {
+        self.speechSynthesizer.delegate = self
+    }
+    
     @IBAction func speakButtonClicked(sender: NSButton) {
         
         if speechSynthesizer.speaking {
@@ -34,7 +36,6 @@ class ViewController: NSViewController {
         } else {
             btnSpeak.enabled = false
             btnStop.enabled = true
-            NSSpeechSynthesizerDelegate(speechSynthesizer, did
             if let contents = textView.string where !contents.isEmpty {
                 speechSynthesizer.startSpeakingString(contents)
             } else {
@@ -48,6 +49,11 @@ class ViewController: NSViewController {
         if speechSynthesizer.speaking {
             speechSynthesizer.stopSpeaking()
         }
+    }
+    
+    func speechSynthesizer(sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
+        btnSpeak.enabled = true
+        btnStop.enabled = false
     }
     
 }
