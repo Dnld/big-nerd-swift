@@ -7,6 +7,7 @@
 //
 
 #import "ContactsViewController.h"
+#import "Contacts-Swift.h"
 
 @interface ContactsViewController ()
 
@@ -19,8 +20,12 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        NSArray *contactArray = @[@"Johnny Appleseed", @"Paul Bunyan", @"Calamity Jane"];
-        _contacts = [NSMutableArray arrayWithArray:contactArray];
+//        NSArray *contactArray = @[@"Johnny Appleseed", @"Paul Bunyan", @"Calamity Jane"];
+//        _contacts = [NSMutableArray arrayWithArray:contactArray];
+//        Contact *c1 = [[Contact alloc] initWithContactName: @"Johnny Applseed"];
+//        Contact *c2 = [[Contact alloc] initWithContactName: @"Paul Bunyan"];
+//        Contact *c3 = [[Contact alloc] initWithContactName: @"Calamity Jane"];
+        _contacts = [NSMutableArray array];
     }
     return self;
 }
@@ -41,9 +46,27 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-    NSString *contact = self.contacts[indexPath.row];
-    cell.textLabel.text = contact;
+    Contact *contact = self.contacts[indexPath.row];
+    cell.textLabel.text = contact.name;
     return cell;
+}
+
+- (IBAction)cancelToContactsViewController:(UIStoryboardSegue *)segue
+{
+    
+}
+
+- (IBAction)createNewContact:(UIStoryboardSegue *)segue
+{
+    NewContactViewController *newContactVC = segue.sourceViewController;
+    NSString *firstName = newContactVC.firstNameTextField.text;
+    NSString *lastName = newContactVC.lastNameTextField.text;
+    if (firstName.length != 0 || lastName.length != 0) {
+        NSString *contactName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+        Contact *newContact = [[Contact alloc] initWithContactName:contactName];
+        [self.contacts addObject:newContact];
+        [self.tableView reloadData];
+    }
 }
 
 @end

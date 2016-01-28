@@ -14,6 +14,8 @@
 		6A5492DE1C59549B007CE87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A5492DD1C59549B007CE87F /* Assets.xcassets */; };
 		6A5492E11C59549B007CE87F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5492DF1C59549B007CE87F /* LaunchScreen.storyboard */; };
 		6A5492EC1C59549B007CE87F /* ContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5492EB1C59549B007CE87F /* ContactsTests.m */; };
+		6A5492F81C595C94007CE87F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5492F71C595C94007CE87F /* Contact.swift */; };
+		6A5492FA1C595FF7007CE87F /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5492F91C595FF7007CE87F /* NewContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		6A5492E71C59549B007CE87F /* ContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5492EB1C59549B007CE87F /* ContactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTests.m; sourceTree = "<group>"; };
 		6A5492ED1C59549B007CE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A5492F61C595C93007CE87F /* Contacts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contacts-Bridging-Header.h"; sourceTree = "<group>"; };
+		6A5492F71C595C94007CE87F /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		6A5492F91C595FF7007CE87F /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +90,14 @@
 				6A5492D51C59549B007CE87F /* AppDelegate.m */,
 				6A5492D71C59549B007CE87F /* ContactsViewController.h */,
 				6A5492D81C59549B007CE87F /* ContactsViewController.m */,
+				6A5492F91C595FF7007CE87F /* NewContactViewController.swift */,
 				6A5492DA1C59549B007CE87F /* Main.storyboard */,
+				6A5492F71C595C94007CE87F /* Contact.swift */,
 				6A5492DD1C59549B007CE87F /* Assets.xcassets */,
 				6A5492DF1C59549B007CE87F /* LaunchScreen.storyboard */,
 				6A5492E21C59549B007CE87F /* Info.plist */,
 				6A5492D11C59549B007CE87F /* Supporting Files */,
+				6A5492F61C595C93007CE87F /* Contacts-Bridging-Header.h */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -211,6 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A5492F81C595C94007CE87F /* Contact.swift in Sources */,
+				6A5492FA1C595FF7007CE87F /* NewContactViewController.swift in Sources */,
 				6A5492D91C59549B007CE87F /* ContactsViewController.m in Sources */,
 				6A5492D61C59549B007CE87F /* AppDelegate.m in Sources */,
 				6A5492D31C59549B007CE87F /* main.m in Sources */,
@@ -339,10 +349,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Contacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.dnld.Contacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts/Contacts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,10 +363,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Contacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.dnld.Contacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts/Contacts-Bridging-Header.h";
 			};
 			name = Release;
 		};
